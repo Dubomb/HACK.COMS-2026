@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ds58ojllv2ywy"]
+
+[ext_resource type="Texture2D" uid="uid://chhxwrm1umbps" path="res://egg.png" id="1_n3f48"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8jxm"]
+
+[node name="Tile" type="PanelContainer" unique_id=1866138714]
+custom_minimum_size = Vector2(100, 100)
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8jxm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=68236930]
+layout_mode = 2
+
+[node name="Egg" type="TextureRect" parent="MarginContainer" unique_id=1342572404]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_n3f48")
+
+[node name="Control" type="Control" parent="MarginContainer" unique_id=1354739681]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control" unique_id=2084096149]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Control" unique_id=1460350191]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "2"
+horizontal_alignment = 1

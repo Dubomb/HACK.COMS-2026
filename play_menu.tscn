@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bpk7l4ufdoq6a"]
+
+[ext_resource type="PackedScene" uid="uid://ds58ojllv2ywy" path="res://tile.tscn" id="1_bfe34"]
+
+[node name="PlayMenu" type="Control" unique_id=1236993858]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 640.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1934105967]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -154.0
+offset_right = 258.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1833869392]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="PlayedLetters" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1179788429]
+layout_mode = 2
+
+[node name="Tile" parent="MarginContainer/VBoxContainer/PlayedLetters" unique_id=1866138714 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile3" parent="MarginContainer/VBoxContainer/PlayedLetters" unique_id=551006481 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile2" parent="MarginContainer/VBoxContainer/PlayedLetters" unique_id=719645349 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile4" parent="MarginContainer/VBoxContainer/PlayedLetters" unique_id=1947195954 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile5" parent="MarginContainer/VBoxContainer/PlayedLetters" unique_id=608100318 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Control" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=156016576]
+layout_mode = 2
+
+[node name="TopLettersRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Control" unique_id=1294481956]
+layout_mode = 2
+
+[node name="Tile" parent="MarginContainer/VBoxContainer/Control/TopLettersRow" unique_id=281742219 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile3" parent="MarginContainer/VBoxContainer/Control/TopLettersRow" unique_id=2066478813 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile2" parent="MarginContainer/VBoxContainer/Control/TopLettersRow" unique_id=666025186 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile4" parent="MarginContainer/VBoxContainer/Control/TopLettersRow" unique_id=1671143113 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile5" parent="MarginContainer/VBoxContainer/Control/TopLettersRow" unique_id=936637895 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="BottomLettersRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Control" unique_id=2126578917]
+layout_mode = 2
+
+[node name="Tile" parent="MarginContainer/VBoxContainer/Control/BottomLettersRow" unique_id=746602056 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile3" parent="MarginContainer/VBoxContainer/Control/BottomLettersRow" unique_id=1561214208 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile2" parent="MarginContainer/VBoxContainer/Control/BottomLettersRow" unique_id=1259208077 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile4" parent="MarginContainer/VBoxContainer/Control/BottomLettersRow" unique_id=1102894418 instance=ExtResource("1_bfe34")]
+layout_mode = 2
+
+[node name="Tile5" parent="MarginContainer/VBoxContainer/Control/BottomLettersRow" unique_id=1418490164 instance=ExtResource("1_bfe34")]
+layout_mode = 2
