@@ -3,7 +3,7 @@ extends Node
 var word_list: WordList
 var players: Array[Player]
 var config: GameConfig
-var curr_player: int = 0
+var curr_player_index: int = 0
 
 func _ready() -> void:
 	word_list = WordList.new()
@@ -25,3 +25,31 @@ func setup_players(player_names: Array[String]) -> void:
 		var bag: Bag = Bag.new(starting_tiles)
 		var player: Player = Player.new(player_name, bag)
 		players.append(player)
+
+func _get_curr_player() -> Player:
+	return players[curr_player_index]
+
+func start_turn() -> void:
+	var curr_player: Player = _get_curr_player()
+	curr_player.draw_hand(config.hand_size)
+
+func submit_word(word: String, used_tiles: Array[Tile]) -> bool:
+	if not word_list.is_valid(word):
+		return false
+	
+	var curr_player: Player = _get_curr_player()
+	var score: int = 0
+	
+	for tile in used_tiles:
+		score += tile.value
+	
+	curr_player.money = score
+	
+	return true
+
+func end_turn() -> void:
+	var curr_player = _get_curr_player()
+	curr_player.discard_hand()
+	
+	curr_player_index += 1
+	curr_player_index %= players.size()
