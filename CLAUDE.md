@@ -19,7 +19,9 @@ Hackathon word deckbuilder in Godot 4.7 (GDScript). Think Dominion/Balatro, but 
 
 **Open questions:** end-game condition, whether money carries over between rounds (`GameConfig.money_carries_over`), shop restocking, and word building order/rearranging.
 
-**Out of scope for MVP:** perks (like Balatro jokers), special/rebus tiles, word length bonuses, network multiplayer. Don't build for these yet.
+**Perks** are modifiers attached to one specific tile the player chooses (like Balatro card enhancements), with rarities Void, Bronze, and Gold. Eggs come in the same three tiers. The shop offers 3 perks per round.
+
+**Out of scope for MVP:** special/rebus tiles, word length bonuses, network multiplayer. Don't build for these yet.
 
 ## Architecture
 

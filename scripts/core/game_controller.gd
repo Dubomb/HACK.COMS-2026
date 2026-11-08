@@ -2,6 +2,7 @@ extends Node
 
 var word_list: WordList
 var players: Array[Player]
+var shops: Array[Shop]
 var config: GameConfig
 var curr_player_index: int = 0
 
@@ -51,5 +52,26 @@ func end_turn() -> void:
 	var curr_player = _get_curr_player()
 	curr_player.discard_hand()
 	
+	curr_player_index += 1
+	curr_player_index %= players.size()
+
+func setup_shops() -> void:
+	shops.clear()
+	
+	for player in players:
+		var shop: Shop = Shop.new(config)
+		shop.roll()
+		shops.append(shop)
+
+func _get_curr_shop() -> Shop:
+	return shops[curr_player_index]
+
+func buy_tile(index: int) -> bool:
+	return _get_curr_shop().buy_tile(_get_curr_player(), index)
+
+func buy_perk(index: int, target: Tile) -> bool:
+	return _get_curr_shop().buy_perk(_get_curr_player(), index, target)
+
+func end_shop_turn() -> void:
 	curr_player_index += 1
 	curr_player_index %= players.size()

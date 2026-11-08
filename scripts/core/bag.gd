@@ -29,6 +29,10 @@ func discard(tiles: Array[Tile]) -> void:
 	discard_pile.append_array(tiles)
 
 
+func all_tiles() -> Array[Tile]:
+	return draw_pile + discard_pile
+
+
 ## New tiles (e.g. bought) go to the discard pile.
 func add(tile: Tile) -> void:
 	discard_pile.append(tile)
