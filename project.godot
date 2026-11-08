@@ -15,6 +15,10 @@ run/main_scene="uid://camtwjvrm6817"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameController="*uid://c2csi752qj384"
+
 [display]
 
 window/stretch/mode="canvas_items"
